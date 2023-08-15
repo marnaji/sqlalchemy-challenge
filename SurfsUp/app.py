@@ -54,7 +54,7 @@ def date_prev_year():
 #################################################
 @app.route("/")
 def welcome():
-    """List of all the available api routes."""
+   
     return (
         f"Available Routes are:<br/>"
         f"/api/v1.0/precipitation<br/>"
