@@ -33,7 +33,7 @@ session = Session(engine)
 app = Flask(__name__)
 
 # Define a function to calculate and return the date one year from the most recent date
-def date_prev_year():
+def date_preyear():
     # Create the session
     session = Session(engine)
 
@@ -72,7 +72,7 @@ def precipitation():
 
     
     # Query the dates and temperature observations of the most-active station for the previous year of data.
-    prcp_data = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= date_prev_year()).all()
+    prcp_data = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= date_preyear()).all()
 
     session.close()
 
