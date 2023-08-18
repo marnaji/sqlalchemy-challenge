@@ -105,7 +105,7 @@ def tobs():
 
      # Query tobs data from last 12 months from the most recent date from Measurement table
     tobs_data = session.query(Measurement.date, Measurement.tobs).filter(Measurement.station == 'USC00519281').\
-                        filter(Measurement.date >= date_prev_year()).all()
+                        filter(Measurement.date >= date_preyear()).all()
      # Close the session                   
     session.close()
      # Create a dictionary from the row data and append to a list of tobs_list
